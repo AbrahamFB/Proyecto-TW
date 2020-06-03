@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style/estilo.css">
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div id="menuSup">
+
+                <ul class="menu">
+                    <li class="top"><a href="/">
+                            <img src="#" alt="Logotipo">
+                        </a></li>
+                    <li class="top"><a class="top_link" href="#"><span>Inicio</span></a></li>
+
+                    <li class="top"><a class="top_link" href="#"><span class="bajo">Categorías</span></a>
+                        <ul class="sub">
+                            <li><a class="sobre" href="#">Peliculas</a>
+                                <ul>
+                                    <li><a href="#">Pestaña</a></li>
+                                    <li><a href="#">Pestaña</a></li>
+                                    <li><a href="#">Pestaña</a></li>
+                                </ul>
+                            </li>
+                            <li class="centro"><a class="sobre" href="#">Programas</a>
+                                <ul>
+                                    <li><a href="#">Pestaña</a></li>
+                                    <li><a href="#">Pestaña</a></li>
+                                    <li><a href="#">Pestaña</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="top"><a class="top_link" href="#"><span>Crear Usuario</span></a></li>
+                    <li class="avatar">
+                        <img class="avatarIMG" src="/avatar/usuario.svg" alt="">
+                    </li>
+
+                    <!-- Buscador -->
+                    <li>
+                        <form action="/search" id="busq" method="GET" name="busqueda" style="display:inline;">
+                            <input id="busqueda-in" name="q"
+                                onblur="if (this.value == &quot;&quot;) this.value = &quot;Buscar...&quot;;"
+                                onfocus="if (this.value == &quot;Buscar...&quot;) this.value = &quot;&quot;;" size="28"
+                                type="text" value="Buscar..." /></form>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Titulo</h1>
+
+</body>
+
+</html>
