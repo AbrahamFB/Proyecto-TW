@@ -1,5 +1,10 @@
 body {
   background-color: black;
+  color: #fff;
+}
+.logo {
+  height: 25px;
+  margin-top: 4px;
 }
 
 /* Menú */
@@ -31,7 +36,7 @@ body {
   float: left;
   height: 35px;
   line-height: 34px;
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   font-family: "Lucida Sans Unicode", "Trebuchet Unicode MS", "Lucida Grande",
     sans-serif;
@@ -99,13 +104,12 @@ body {
   width: 200px;
   line-height: 30px;
   text-indent: 5px;
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
 }
 .menu li ul.sub li a.sobre {
   /* Color de fondo del submenú */
-  background: #333
-    185px 10px no-repeat;
+  background: #333 185px 10px no-repeat;
 }
 .menu li:hover ul.sub li a:hover {
   background: #2580a2; /* Color de fondo al pasar el cursor */
@@ -114,8 +118,7 @@ body {
 .menu li:hover ul.sub li a.sobre:hover,
 .menu li:hover ul li:hover > a.sobre {
   /* Color de fondo al pasar el cursor */
-  background: #2580a2
-    185px 10px no-repeat;
+  background: #2580a2 185px 10px no-repeat;
   color: #fff;
 }
 
@@ -133,15 +136,15 @@ body {
   height: auto;
 }
 
-.avatar{
-    height: 25px;
-    float: right;
-    text-align: center;
-    margin-top: 4px;
-    margin-right: 10px;
+.avatar {
+  height: 25px;
+  float: right;
+  text-align: center;
+  margin-top: 4px;
+  margin-right: 10px;
 }
-.avatarIMG{
-    height: 25px;
+.avatarIMG {
+  height: 25px;
 }
 
 #busq {
