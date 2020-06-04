@@ -24,6 +24,7 @@
 
                     <li class="top"><a class="top_link" href="#"><span class="bajo">Categorías</span></a>
                         <ul class="sub">
+                            <php>
                             <li><a class="sobre" href="#">Peliculas</a>
                                 <ul>
                                     <li><a href="#">Pestaña</a></li>
@@ -45,14 +46,19 @@
                     <li class="top"><a class="top_link" href="#"><span>Crear Usuario</span></a></li>
                     <li class="avatar">
                         <a href="#"><img class="avatarIMG" src="/avatar/usuario.svg" alt=""></a>
-
-                        <!-- Buscador -->
                     <li>
-                        <form action="/search" id="busq" method="GET" name="busqueda" style="display:inline;">
-                            <input id="busqueda-in" name="q"
-                                onblur="if (this.value == &quot;&quot;) this.value = &quot;Buscar...&quot;;"
-                                onfocus="if (this.value == &quot;Buscar...&quot;) this.value = &quot;&quot;;" size="28"
-                                type="text" value="Buscar..." /></form>
+
+                    <li class="avatar"><a href="#"><img class="avatarIMG"
+                                src="https://cdn1.iconfinder.com/data/icons/avatar-1-2/512/Add_User1-512.png"
+                                alt=""></a>
+                    </li>
+
+                    <!-- Buscador -->
+                    <form action="/search" id="busq" method="GET" name="busqueda" style="display:inline;">
+                        <input id="busqueda-in" name="q"
+                            onblur="if (this.value == &quot;&quot;) this.value = &quot;Buscar...&quot;;"
+                            onfocus="if (this.value == &quot;Buscar...&quot;) this.value = &quot;&quot;;" size="28"
+                            type="text" value="Buscar..." /></form>
                     </li>
 
 
@@ -60,7 +66,9 @@
             </div>
         </nav>
     </header>
+    <section>
 
+    </section>
     <h1>Titulo</h1>
 
 </body>

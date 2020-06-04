@@ -9,7 +9,7 @@ body {
 
 /* Menú */
 #menuSup {
-  width: 100%; /* Ancho del menú */
+  max-width: 100%; /* Ancho del menú */
   height: 35px;
   padding-left: 14px;
   background: #333; /* Color de fondo */
@@ -141,7 +141,7 @@ body {
   float: right;
   text-align: center;
   margin-top: 4px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .avatarIMG {
   height: 25px;
@@ -161,3 +161,6 @@ body {
   background: transparent;
   text-align: center;
 }
+
+
+
