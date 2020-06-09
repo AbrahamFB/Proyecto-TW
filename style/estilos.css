@@ -10,6 +10,10 @@ ul,ol{
 	list-style: none;
 }
 
+body{
+	font-family: Open sans;
+}
+
 .slideshow{
 	width: 100%;
 	position: relative;
