@@ -16,6 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/typeahead.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ventanaFlotante.js"></script>
     <script>
         $(document).ready(function(){
         $('input.typeahead').typeahead({
