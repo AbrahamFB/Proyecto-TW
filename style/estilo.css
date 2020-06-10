@@ -193,3 +193,109 @@ body {
   }
 }
 
+
+/*Recien agregado*/
+.oscurecer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+	background: rgba(0,0,0,.8);
+}
+.oscurecer2 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+  display: none;
+  background: black;
+  font-family: 'open sans';
+}
+
+.oscurecer2 h3{
+  text-align: center;
+  margin:20px 0 15px 0;
+  font-weight: 300;
+}
+
+.linea{
+  border-top: 5px solid #0077C0;
+  margin-bottom: 40px;
+}
+
+.avatares{
+  display:flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius:3px;
+}
+
+.avatares .iavatar{
+  width: 150px;
+  position: relative;
+  height:150px;
+  margin-bottom:5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.iavatar img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.registrar {
+	width: 40%;
+	background: #fff;
+	border-radius: .5em;
+	padding: 3em;
+	position: fixed;
+	top:50px;
+	left: 30%;
+	z-index: 200;
+	display: none;
+}
+.registrar h1 {
+	color: #333;
+  text-shadow:none;
+  margin-top: -5px;
+}
+.registrar label{
+  color: black;
+}
+.registrar input {
+	width: 100%;
+
+  color:black;
+	padding: 1em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#elegirA{
+  width: 10%;
+}
+#ava{
+  text-align: center;
+  
+}
+.avatarOpcion{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 120px;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+  z-index: 1;
+}
+
+#crear{
+  color:white;
+  padding: .5em;
+}
