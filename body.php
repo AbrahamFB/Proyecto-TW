@@ -11,30 +11,30 @@
 
                     <li class="top"><a class="top_link" href="#"><span class="bajo">Categorías</span></a>
                         <ul class="sub">
-                        <li><a class="sobre" href="#programas">Programas</a>
+                            <li><a class="sobre" href="#programas">Programas</a>
                                 <ul>
-                            <?php
+                                    <?php
                                 include("conexionDB.php");
                                 while ($mostrar = mysqli_fetch_array($resultBarraPro)){
                                 ?>
-                                        <li><?php echo "<a href='#'>".$mostrar['titulo']."</a>"?></li>
-                                    
-                            <?php    
+                                    <li><?php echo "<a href='#'>".$mostrar['titulo']."</a>"?></li>
+
+                                    <?php    
                             }
                                 ?></ul>
-                                </li>
-                                <li><a class="sobre" href="#peliculas">Peliculas</a>
+                            </li>
+                            <li><a class="sobre" href="#peliculas">Peliculas</a>
                                 <ul>
-                            <?php
+                                    <?php
                                 include("conexionDB.php");
                                 while ($mostrar1 = mysqli_fetch_array($resultBarraPe)){
                                 ?>
-                                        <li><?php echo "<a href=''>".$mostrar1['titulo']."</a>"?></li>
-                                    
-                            <?php    
+                                    <li><?php echo "<a href=''>".$mostrar1['titulo']."</a>"?></li>
+
+                                    <?php    
                             }
                                 ?></ul>
-                                </li>
+                            </li>
 
                         </ul>
                     </li>
@@ -50,7 +50,8 @@
 
                     <!-- Buscador -->
                     <form action="/search" id="busq" method="GET" name="busqueda" style="display:inline;">
-                        <input type="text" name="busquedaEncabezado" class="typeahead tt-query buscar" autocomplete="off" spellcheck="false" placeholder="Buscar"></form>
+                        <input type="text" name="busquedaEncabezado" class="typeahead tt-query buscar"
+                            autocomplete="off" spellcheck="false" placeholder="Buscar"></form>
                     </li>
 
 
@@ -61,16 +62,16 @@
     <section>
         <?php include_once 'sliderPrincipal.php';?>
     </section>
-        <?php include_once 'tablaProgramas.php'?>
+    <?php include_once 'tablaProgramas.php'?>
     </section>
-    <section>   
+    <section>
         <?php include_once 'tablaPeliculas.php'?>
     </section>
-    <section>   
+    <section>
         <?php include_once 'registro.php'?>
     </section>
 
-    
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -82,13 +83,13 @@
     <script src="js/main.js"></script>
     <script src="js/ventanaFlotante.js"></script>
     <script>
-        $(document).ready(function(){
-        $('input.typeahead').typeahead({
-            name: 'busquedaEncabezado',
-            remote:'busca.php?key=%QUERY',
-            limit : 10
-        });
+$(document).ready(function() {
+    $('input.typeahead').typeahead({
+        name: 'busquedaEncabezado',
+        remote: 'busca.php?key=%QUERY',
+        limit: 10
     });
+});
     </script>
-    
-</body>
+
+    </body>

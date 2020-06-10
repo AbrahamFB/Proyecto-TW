@@ -10,13 +10,12 @@
 
     <link rel="stylesheet" href="style/estilo.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-      
+
     <link rel="stylesheet" href="../Resources/css/bootstrap.min.css">
 
     <!--datables CSS básico-->
     <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
-    <!--datables estilo bootstrap 4 CSS-->  
-    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css"> 
+    <!--datables estilo bootstrap 4 CSS-->
+    <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+
 <body>
-
-

@@ -24,6 +24,9 @@
 
  $resultBarraPe = mysqli_query($conexion, $sqlBarraPe);
 
+ $sqlPerfil = "SELECT * FROM `perfil` ORDER BY `idperfil`";
+ $resultPerfil = mysqli_query($conexion, $sqlPerfil);
+
 
  mysqli_close($conexion);
 ?>

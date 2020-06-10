@@ -1,7 +1,7 @@
         <div class="slideshow">
             <ul class="slider">
 
-            <?php
+                <?php
                 include("conexionDB.php");
 
                 $conexion = mysqli_connect($host_db, $user_db, $pass_db, $db_name);
@@ -17,9 +17,9 @@
                 <li>
                     <?php echo "<img src='../vista.php?id=$i' alt='Img' width='600'/>"; ?>
                     <section class="caption">
-                    <?php echo "<h1 class='tituloSli' style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>".$mostrar['titulo']."</h1>" ?>
-                    <?php echo "<p class='subSli'style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>Temporada: ".$mostrar['temporada']."</p>" ?>
-                    <?php echo "<p class='subSli'style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>Capitulo: ".$mostrar['capitulo']."</p>" ?>
+                        <?php echo "<h1 class='tituloSli' style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>".$mostrar['titulo']."</h1>" ?>
+                        <?php echo "<p class='subSli'style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>Temporada: ".$mostrar['temporada']."</p>" ?>
+                        <?php echo "<p class='subSli'style='color: white; text-shadow: black 0.1em 0.1em 0.2em'>Capitulo: ".$mostrar['capitulo']."</p>" ?>
                     </section>
                 </li>
                 <?php
@@ -29,4 +29,3 @@
 
             </ul>
         </div>
-        
