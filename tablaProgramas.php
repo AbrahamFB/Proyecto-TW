@@ -35,7 +35,7 @@
                                         <td><?php echo $dat['titulo'] ?></td>
                                         <td><?php echo $dat['temporada'] ?></td>
                                         <td><?php echo $dat['capitulo'] ?></td>
-                                        <td><?php echo "<a href='#'><img src='vista.php?id=$j' alt='Img' width='200'/></>"; ?></td>    
+                                        <td><?php echo "<a href='#'><img src='../vista.php?id=$j' alt='Img' width='200'/></>"; ?></td>    
                                         <td></td>
                                     </tr>
                                     <?php

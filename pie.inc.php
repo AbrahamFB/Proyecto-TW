@@ -5,6 +5,7 @@
     		| Todos los derechos reservados D.R. &reg;</p>
 
      </footer>
-    
+	 <link rel="stylesheet" href="../style/estilos.css">
+
     </body>
 </html>

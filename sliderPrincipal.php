@@ -15,7 +15,7 @@
                         $i++;
                         ?>
                 <li>
-                    <?php echo "<img src='vista.php?id=$i' alt='Img' width='600'/>"; ?>
+                    <?php echo "<img src='../vista.php?id=$i' alt='Img' width='600'/>"; ?>
                     <section class="caption">
                     <?php echo "<h1 class='tituloSli'>".$mostrar['titulo']."</h1>" ?>
                     <?php echo "<p class='subSli'>Temporada: ".$mostrar['temporada']."</p>" ?>
@@ -29,3 +29,4 @@
 
             </ul>
         </div>
+        

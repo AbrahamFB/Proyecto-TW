@@ -32,7 +32,7 @@
                                     <tr>
                                         <td><?php echo $dat['titulo'] ?></td>
                                         <td><?php echo $dat['duracion'] ?></td>
-                                        <td><?php echo "<a href='#'><img src='vista2.php?id=$j' alt='Img' width='200'/></a>"; ?></td>    
+                                        <td><?php echo "<a href='#'><img src='../vista2.php?id=$j' alt='Img' width='200'/></a>"; ?></td>    
                                         <td></td>
                                     </tr>
                                     <?php
