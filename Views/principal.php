@@ -127,22 +127,22 @@ include "../conexionDB.php";
     <div class="oscurecer2" id="oscurecer2">
         <h3>Elige tu avatar:</h3>
         <div class="avatares">
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/001-man.png"></div>
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/002-woman.png"></div>
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/003-delivery man.png"></div>
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/009-girl.png"></div>
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/016-punk.png"></div>
-            <div class="iavatar"><img class="avatars"src="../3011264-avatars-with-medical-masks/png/017-woman.png"></div>
+            <div class="iavatar"alt="avatar"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/001-man.png"></div>
+            <div class="iavatar"alt="avatar1"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/002-woman.png"></div>
+            <div class="iavatar"alt="avatar2"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/003-delivery man.png"></div>
+            <div class="iavatar"alt="avatar3"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/009-girl.png"></div>
+            <div class="iavatar"alt="avatar4"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/016-punk.png"></div>
+            <div class="iavatar"alt="avatar5"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/017-woman.png"></div>
         </div>
         <input type="button" value="¡Vamos!" class="btn btn-success" id="elegirA">
     </div>
 		<h1>Crear nuevo perfil</h1>
 
-        <form action="">
+        <form action="" id="new">
 
         <div class="alert alert-success" id="alert" style="display: none;">&nbsp;</div>
-
-        <input type="file" placeholder="kdmk">
+        <div class="alert alert-danger" id="alertd" style="display: none;">&nbsp;</div>
+        
             <div id="ava">
                 <a href="#" id="avatarOpcion"><img class="avatarOpcion"   src="../3011264-avatars-with-medical-masks/png/001-man.png" alt="kk"></a>
 
@@ -195,6 +195,7 @@ include "../conexionDB.php";
     });
     </script>
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../style/font-awesome.css">
