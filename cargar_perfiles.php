@@ -1,15 +1,15 @@
 <?php 
 require_once 'conexion.php';
 
-function getListasRep(){
+function getPerfil(){
   $mysqli = getConn();
   $query = 'SELECT * FROM `perfil`';
   $result = $mysqli->query($query);
-  $listas = '<option value="0">Elige tu Usuario</option>';
+  $perfiles = '<option value="0">Elige tu Usuario</option>';
   while($row = $result->fetch_array(MYSQLI_ASSOC)){
-    $listas .= "<option value='$row[idPerfil]'>$row[usuario]</option>";
+    $perfiles .= "<option value='$row[idPerfil]'>$row[usuario]</option>";
   }
-  return $listas;
+  return $perfiles;
 }
 
-echo getListasRep();
+echo getPerfil();

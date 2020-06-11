@@ -8,7 +8,7 @@
 		public  $conexion;
 
 		public function __construct(){
-			$this->servidor   = "127.0.0.1";
+			$this->servidor   = "localhost";
 			$this->usuario	  = "root";
 			$this->contraseña = "";
 			$this->basedatos  = "id13949485_fundb";
