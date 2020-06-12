@@ -7,7 +7,7 @@ if(!empty($_GET['id'])){
     
     //revisar conexion
     if($db->connect_error){
-       die("Conexión Fallida: " . $db->connect_error);
+       die("Connection failed: " . $db->connect_error);
     }
     
     //Extraer imagen de la BD mediante GET

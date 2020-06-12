@@ -133,45 +133,55 @@ include "../conexionDB.php";
                         </section>
 
                         <section>
-    <div class="oscurecer" id="oscurecer"></div>
-	<div class="registrar" id="registrar">
-    <div class="oscurecer2" id="oscurecer2">
-        <h3>Elige tu avatar:</h3>
-        <div class="avatares">
-            <div class="iavatar"alt="avatar"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/001-man.png"></div>
-            <div class="iavatar"alt="avatar1"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/002-woman.png"></div>
-            <div class="iavatar"alt="avatar2"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/003-delivery man.png"></div>
-            <div class="iavatar"alt="avatar3"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/009-girl.png"></div>
-            <div class="iavatar"alt="avatar4"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/016-punk.png"></div>
-            <div class="iavatar"alt="avatar5"><img class="avatars" src="../3011264-avatars-with-medical-masks/png/017-woman.png"></div>
-        </div>
-        <input type="button" value="¡Vamos!" class="btn btn-success" id="elegirA">
-    </div>
-		<h1>Crear nuevo perfil</h1>
+                            <div class="oscurecer" id="oscurecer"></div>
+                            <div class="registrar" id="registrar">
+                                <div class="oscurecer2" id="oscurecer2">
+                                    <h3>Elige tu avatar:</h3>
+                                    <div class="avatares">
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/001-man.png"></div>
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/002-woman.png"></div>
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/003-delivery man.png">
+                                        </div>
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/009-girl.png"></div>
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/016-punk.png"></div>
+                                        <div class="iavatar"><img class="avatars"
+                                                src="../3011264-avatars-with-medical-masks/png/017-woman.png"></div>
+                                    </div>
+                                    <input type="button" value="¡Vamos!" class="btn btn-success" id="elegirA">
+                                </div>
+                                <h1>Crear nuevo perfil</h1>
 
-        <form action="" id="new">
+                                <form action="">
 
-        <div class="alert alert-success" id="alert" style="display: none;">&nbsp;</div>
-        <div class="alert alert-danger" id="alertd" style="display: none;">&nbsp;</div>
-        
-            <div id="ava">
-                <a href="#" id="avatarOpcion"><img class="avatarOpcion"   src="../3011264-avatars-with-medical-masks/png/001-man.png" alt="kk"></a>
+                                    <div class="alert alert-success" id="alert" style="display: none;">&nbsp;</div>
 
-            </div>
+                                    <input type="file" placeholder="kdmk">
+                                    <div id="ava">
+                                        <a href="#" id="avatarOpcion"><img class="avatarOpcion"
+                                                src="../3011264-avatars-with-medical-masks/png/001-man.png"
+                                                alt="kk"></a>
 
-            <label for="usuario">Nombre:</label>
-            <input type="text" placeholder="Nombre de usuario" id="usuario" name="nombreusuario" class="form-control">
-            <div id="resultadouser"  style="display: none;"></div>
-            <label style="color:black;"for="sel1">Idioma:</label>
-            <select class="form-control" id="sel1"></select>
-            <label for="sel2">Clasificación:</label>
-			<select class="form-control" id="sel2"></select>
-            <input type="button" value="Crear" class="btn btn-success" id="crear">
+                                    </div>
 
-		</form>
-	</div>
+                                    <label for="usuario">Nombre:</label>
+                                    <input type="text" placeholder="Nombre de usuario" id="usuario" name="nombreusuario"
+                                        class="form-control">
+                                    <div id="resultadouser" style="display: none;"></div>
+                                    <label style="color:black;" for="sel1">Idioma:</label>
+                                    <select class="form-control" id="sel1"></select>
+                                    <label for="sel2">Clasificación:</label>
+                                    <select class="form-control" id="sel2"></select>
+                                    <input type="button" value="Crear" class="btn btn-success" id="crear">
 
-    </section>
+                                </form>
+                            </div>
+
+                        </section>
 
 
 
@@ -237,7 +247,7 @@ include "../conexionDB.php";
 
         $('#enviar').on('click', function() {
             var resultado = 'Lista de perfiles: ' + $('#lista_perfiles option:selected').text() +
-                ' Avatar elegido: ' + $('#avatar option:selected').text()
+                ' Avatar elegido: ' + $('#videos option:selected').text()
 
             $('#resultado1').html(resultado)
         })

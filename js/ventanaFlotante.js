@@ -1,3 +1,8 @@
+
+
+
+
+//////////////
 var x; 
 x = $(document); 
 x.ready(mostrarLoginYRegistro); 
@@ -31,10 +36,10 @@ function insertar(){
 				else{
 					$("#alertd").html("El usuario ingresado ya existe");
 					$("#alertd").show();
-					
+					$("#alertd").fadeOut(1000);
 				}
 				$("#alert").fadeOut(1000);
-				$("#alertd").fadeOut(2000);
+				
 			}
 		}
 		
@@ -68,7 +73,7 @@ function colorear(){
 function oscurecer(e){
 	e.preventDefault();
 	$("#oscurecer2").fadeIn(300);
-//	alert("wola");
+	alert("wola");
 	$(".avatars").dblclick(colorear);
 	$("#elegirA").click(desoscurer);
 }
