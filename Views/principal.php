@@ -66,14 +66,131 @@ include "../conexionDB.php";
                 </li>
                 <li>
                     <div class="perfilAv">
+                    <div class="dropdown dropleft"id="dropdown">
+                    
+                        <button type="button" class="btn btn-primary dropdown-toggle" id="but" data-toggle="dropdown">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" onclick="apareceEdit()"id="editarPerfilb">Editar perfil</a>
+                            <script>
+                             
+                            function update(){
+                            var usuario=$("#usuario").val();
+                            var idioma=$("#sel1").val();
+                            var clasificacion=$("#sel2").val();
+                            var rutaAvatar=$(".avatarOpcion").attr("src");
+                            var perfil=$("#lista_perfiles").val();
+                            var datoString="nombreusuario="+usuario+"&idioma="+idioma+"&clasificacion="+clasificacion+"&ruta="+rutaAvatar+"&boton=editar&idPerfil="+perfil;
+                            
+                            if(usuario!=''){
+                                $.ajax({
+                                    type:"POST",
+                                    url:"../insertar.php",
+                                    data: datoString,
+                                    success: function(data){
+                                        //alert(data);
+                                        if(data=='1'){
+                                            $("#alert").html("Se ha actualizado el nuevo perfil con exito");
+                                            $("#alert").show();
+                                            desapareceRegistro();
+                                            $("#usuario").val("");
+                                          //  alert("1");
+                                        }
+                                        else{
+                                            $("#alertd").html("El usuario ingresado ya existe");
+                                            $("#alertd").show();
+                                            $("#alertd").fadeOut(1000);
+                                        }
+                                        $("#alert").fadeOut(1000);
+                                        
+                                    }
+                                }
+                                
+                                );
+                                
+                            }
+                            else{
+                                $("#alertd").html("Hay campos vacios");
+                                $("#alertd").show();
+                            }	
+                            
+                        }
+                             function mostrarFormulario2(){
+                                $("#registrar").fadeIn();
+                                $("#avatarOpcion").click(oscurecer);
+                                $("#oscurecer").click(desapareceRegistro);
+                                $("#editarDatos").click(update);
+                                
+                                
+                            }
+                                function apareceEdit(e){
+                                    var s1;
+                                    var s2;
+                                    var perfil=$("#lista_perfiles").val();
+                                    $("#h2o").fadeIn();
+                                    $("#editarDatos").fadeIn();
+                                    $("#crear").fadeOut();
+                                    $("#h1o").fadeOut();
+                                    var x;
+                                    $.post("../obtenerPerfil.php", 
+                                    {
+                                        idPerfil: perfil,
+                                        solicitud:"1"
+                                    }
+                                    ,function(data,status){
+                                       respuesta=eval(data);
+                                       $("#usuario").val(respuesta[0]);
+	                                   $("#sel1").val(respuesta[1]);
+	                                   $("#sel2").val(respuesta[2]);
+                                        s1=respuesta[1];
+                                        s2=respuesta[2];
+	                                    $(".avatarOpcion").attr("src",respuesta[3]);
+                                       
+                                        
+                                        /*
+                                        for(i in respuesta)
+                                        x.prepend("<option>"+respuesta[i]+"</option>");*/
+                                    });
+                                    //e.preventDefault();
+                                    var x;
+                                    
+                                $.get("../regresarIdioma.php", function(data,status){
+                                    respuesta=eval(data);
+                                    
+                                    x=$("#sel1");
+                                    x.prepend("<option>"+s2+"</option>");
+                                    for(i in respuesta)
+                                    if(s2!=respuesta[i])
+                                    x.prepend("<option>"+respuesta[i]+"</option>");
+                                });
+                                $.get("../regresaClasi.php", function(data, status){
+                                    respuesta=eval(data);
+                                    x=$("#sel2");
+                                    x.prepend("<option>"+s1+"</option>");
+                                    for(i in respuesta)
+                                    if(s1!=respuesta[i])
+                                    x.prepend("<option>"+respuesta[i]+"</option>");
+                                });
+                                
+                                $("#oscurecer").fadeIn(500,mostrarFormulario2);
+                                }
+                                function apagar(){
+                                    $("#h1o").fadeIn();
+                                    $("#crear").fadeIn();
+                                    $("#h2o").fadeOut();
+                                    $("#editarDatos").fadeOut();
+                                }
+                            </script>
+                        </div>
+                        </div><!--
                         <a href="#">
                             <p class="perfilIMG" id="perfiles" name="perfil" style="style:inline;">
                             </p>
                         </a>
+                        -->
                     </div>
                 </li>
-                <!--Donde esta Bob sea para ver los datos del perfil al precionarlo-->
-                <li class="avatar"><a href="#" id="activarCrear" style="z-index:100;"><img class="avatarIMG"
+                <li class="avatar"><a href="#" id="activarCrear" onclick="apagar()" style="z-index:100;"><img class="avatarIMG"
                             src="https://cdn1.iconfinder.com/data/icons/avatar-1-2/512/Add_User1-512.png" alt=""
                             style="margin-left: 10px"></a>
                 </li>
@@ -99,17 +216,22 @@ include "../conexionDB.php";
     </nav>
     <nav class="navbar navbar-default">
         <div class="navbar-header">
+        
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="javascript: void(0)" class="dropdown-toggle"
                             data-toggle="dropdown"><?php echo "Bienvenido " . $_SESSION['nombre']; ?></a>
                         <ul class="dropdown-menu">
                             <li><a href="javascript: void(0)" onclick='cerrar();'>Terminar Sesión</a></li>
+                            
                         </ul>
                     </li>
 
                 </ul>
-            </div>
+        </div>
+        
+
+        
     </nav>
     <div class="container">
         <div class="row">
@@ -152,10 +274,10 @@ include "../conexionDB.php";
                                         <div class="iavatar"><img class="avatars"
                                                 src="../3011264-avatars-with-medical-masks/png/017-woman.png"></div>
                                     </div>
-                                    <input type="button" value="¡Vamos!" class="btn btn-success" id="elegirA">
+                                    <input type="button" value="Salir" class="btn btn-success" id="elegirA">
                                 </div>
-                                <h1>Crear nuevo perfil</h1>
-
+                                <h1 id="h1o" >Crear nuevo perfil</h1>
+                                <h1 id="h2o">Edita tus datos</h1>
                                 <form action="">
 
                                     <div class="alert alert-success" id="alert" style="display: none;">&nbsp;</div>
@@ -177,9 +299,11 @@ include "../conexionDB.php";
                                     <label for="sel2">Clasificación:</label>
                                     <select class="form-control" id="sel2"></select>
                                     <input type="button" value="Crear" class="btn btn-success" id="crear">
-
+                                    <input type="button" value="Guardar datos" class="btn btn-success" id="editarDatos">
                                 </form>
                             </div>
+ 
+
 
                         </section>
 
@@ -238,7 +362,7 @@ include "../conexionDB.php";
                     }
                 })
                 .done(function(listas_per) {
-                    $('#perfiles').html(listas_per)
+                    $('#but').html(listas_per)
                 })
                 .fail(function() {
                     alert('Hubo un errror al cargar los avatares')

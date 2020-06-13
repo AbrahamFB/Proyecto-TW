@@ -16,6 +16,8 @@ body {
   background: #333; /* Color de fondo */
   border-radius: 20px; /* Bordes redondeados de la barra principal */
 }
+
+
 .menu {
   padding: 0;
   margin: 0;
@@ -176,7 +178,25 @@ body {
   float: right;
   margin-left: 94.5%;
   position: absolute;
-  margin-top: 5px;
+  margin-top: 2px;
+  height: 15px;
+  
+  width: 45px;
+}
+#dropdown {
+  margin-top:0px;
+    text-align: center;
+    
+    background: #333;
+    height:20px;
+    margin-left: 0px;
+    border:1px solid #333;
+  }
+#but{
+  background-color: #333;
+  height:32px;
+  width:45px;
+  border:1px solid #333;
 }
 
 /*Recien agregado*/
@@ -236,7 +256,7 @@ body {
   object-fit: cover;
 }
 
-.registrar {
+.registrar,.editar {
   width: 40%;
   background: #fff;
   border-radius: 0.5em;
@@ -247,7 +267,19 @@ body {
   z-index: 200;
   display: none;
 }
-.registrar h1 {
+.editar{
+  width: 40%;
+  background: #fff;
+  border-radius: 0.5em;
+  padding: 3em;
+  position: fixed;
+  top: 50px;
+  left: 30%;
+  z-index: 200;
+  display: none;
+}
+
+.registrar h1, .editar h1 {
   color: #333;
   text-shadow: none;
   margin-top: -5px;
@@ -255,7 +287,7 @@ body {
 .registrar label {
   color: black;
 }
-.registrar input {
+.registrar input, .editar input {
   width: 100%;
 
   color: black;
@@ -266,7 +298,7 @@ body {
 #elegirA {
   width: 10%;
 }
-#ava {
+#ava,#ava2{
   text-align: center;
 }
 .avatarOpcion {
@@ -280,7 +312,7 @@ body {
   z-index: 1;
 }
 
-#crear {
+#crear,#editarDatos {
   color: white;
   padding: 0.5em;
 }

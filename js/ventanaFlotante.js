@@ -14,11 +14,12 @@ function desapareceRegistro(){
 	$("#registrar").fadeOut(800,desapareceOscurecer);
 }
 function insertar(){
+	
 	var usuario=$("#usuario").val();
 	var idioma=$("#sel1").val();
 	var clasificacion=$("#sel2").val();
 	var rutaAvatar=$(".avatarOpcion").attr("src");
-	var datoString="nombreusuario="+usuario+"&idioma="+idioma+"&clasificacion="+clasificacion+"&ruta="+rutaAvatar;
+	var datoString="nombreusuario="+usuario+"&idioma="+idioma+"&clasificacion="+clasificacion+"&ruta="+rutaAvatar+"&boton=insertar"+"&idPerfil=1";
 	
 	if(usuario!=''){
 		$.ajax({
@@ -26,7 +27,9 @@ function insertar(){
 			url:"../insertar.php",
 			data: datoString,
 			success: function(data){
+			//	alert(data);
 				if(data=='1'){
+					//alert("dj");
 					$("#alert").html("Se ha creado el nuevo perfil con exito");
 					$("#alert").show();
 					desapareceRegistro();
@@ -34,6 +37,7 @@ function insertar(){
 
 				}
 				else{
+					//alert("dggggggj");
 					$("#alertd").html("El usuario ingresado ya existe");
 					$("#alertd").show();
 					$("#alertd").fadeOut(1000);
@@ -47,8 +51,10 @@ function insertar(){
 		
 	}
 	else{
+		
 		$("#alertd").html("Hay campos vacios");
-		$("#alertd").show();
+		$("#alertd").fadeIn();
+		alert("No olvides llenar todos los campos");
 	}	
 	
 }
@@ -73,13 +79,15 @@ function colorear(){
 function oscurecer(e){
 	e.preventDefault();
 	$("#oscurecer2").fadeIn(300);
-	alert("wola");
+	//alert("wola");
 	$(".avatars").dblclick(colorear);
 	$("#elegirA").click(desoscurer);
 }
 
 function mostrarFormulario(){
 	$("#registrar").fadeIn();
+
+	
 	/*
 	$("#usuario").on("blur",function(){
 		var nombre=$(this).val();
@@ -114,8 +122,14 @@ function apareceRegistro(e){
 		x.prepend("<option>"+respuesta[i]+"</option>");
 	  });
 
-    $("#oscurecer").fadeIn(500,mostrarFormulario);
+	$("#oscurecer").fadeIn(500,mostrarFormulario);
+
 }
 function mostrarLoginYRegistro(){
+
 	$("#activarCrear").click(apareceRegistro);
+	
+
+	
+
 }
